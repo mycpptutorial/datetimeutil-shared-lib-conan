@@ -32,4 +32,4 @@ class CpprestsdkConan(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["datetimeutil"]
+        self.cpp_info.libs = ["datetimeutil-shared-lib-conan"]
