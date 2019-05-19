@@ -4,7 +4,6 @@ from conans import ConanFile, CMake, tools
 
 class DatetimeUtilSharedLibConanTest(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable"
     generators = "cmake"
 
     def build(self):

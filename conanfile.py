@@ -1,4 +1,4 @@
-from conans import ConanFile, CMake, tools
+from conans import ConanFile, CMake
 
 
 class DatetimeUtilSharedLibConan(ConanFile):
@@ -11,13 +11,13 @@ class DatetimeUtilSharedLibConan(ConanFile):
     topics = ("C++ Shared Library", "conan", "package manager", "cpp", "C++ tutorial", "Conan Package Manager")
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
-    default_options = "shared=True"
+    default_options = "shared=False"
     generators = "cmake"
-    exports = "*"
+    exports_sources = "src/*"
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure(source_folder=".")
+        cmake.configure(source_folder="src")
         cmake.build()
 
     def package(self):
@@ -29,4 +29,4 @@ class DatetimeUtilSharedLibConan(ConanFile):
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
-        self.cpp_info.libs = ["datetimeutil-shared-lib-conan"]
+        self.cpp_info.libs = ["datetimeutil"]
