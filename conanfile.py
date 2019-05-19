@@ -11,7 +11,7 @@ class DatetimeUtilSharedLibConan(ConanFile):
     topics = ("C++ Shared Library", "conan", "package manager", "cpp", "C++ tutorial", "Conan Package Manager")
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
-    default_options = "shared=False"
+    default_options = "shared=True"
     generators = "cmake"
     exports_sources = "src/*"
 
