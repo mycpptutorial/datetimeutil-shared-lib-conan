@@ -8,7 +8,9 @@ conan remote add datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable https:
 conan user -p <APIKEY> -r datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable yourbintrayusername
 
 
-
 conan install datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable --build=dateti
 meutil-shared-lib-conan
+
+conan upload "datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable" -r datetime
+util-shared-lib-conan/1.0.0@mycpptutorial/stable --all
 ```
