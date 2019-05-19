@@ -1,0 +1,5 @@
+version: '3'
+services:
+  datetimeutil-shared-lib-conan:
+    build: .
+    image: mycpptutorial/datetimeutil-shared-lib-conan:1.0.0
