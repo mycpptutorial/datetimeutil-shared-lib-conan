@@ -15,13 +15,9 @@ class CpprestsdkConan(ConanFile):
     generators = "cmake"
     exports = "*"
 
-    def source(self):
-        self.run("git clone https://github.com/mycpptutorial/datetimeutil-shared-lib-conan.git")
-        self.run("cd datetimeutil-shared-lib-conan")
-
     def build(self):
         cmake = CMake(self)
-        cmake.configure(source_folder="datetimeutil-shared-lib-conan")
+        cmake.configure(source_folder=".")
         cmake.build()
 
     def package(self):
