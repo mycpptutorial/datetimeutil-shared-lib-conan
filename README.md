@@ -2,7 +2,9 @@
 
 
 ```
-conan export . datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable
+mkdir build
+cd build
+conan export .. datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable
 
 conan remote remove datetimeutil-shared-lib-conan/1.0.0@mycpptutorial/stable
 
