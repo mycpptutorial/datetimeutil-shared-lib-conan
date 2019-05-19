@@ -30,3 +30,16 @@
 *.exe
 *.out
 *.app
+
+/*.dSYM
+
+/.vscode
+
+/build
+
+.DS_Store
+
+/**/.DS_Store
+
+
+/**/build
