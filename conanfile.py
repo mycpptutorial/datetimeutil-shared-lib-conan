@@ -13,6 +13,7 @@ class CpprestsdkConan(ConanFile):
     options = {"shared": [True, False]}
     default_options = "shared=False"
     generators = "cmake"
+    exports = "*"
 
     def source(self):
         self.run("git clone https://github.com/mycpptutorial/datetimeutil-shared-lib-conan.git")
