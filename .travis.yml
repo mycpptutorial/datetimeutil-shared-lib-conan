@@ -13,6 +13,8 @@ before_install:
 script:
 - if [ $TRAVIS_OS_NAME == linux ]; then ./scripts/build.sh .. build; fi
 - if [ $TRAVIS_OS_NAME == osx ]; then ./scripts/build.sh .. build; fi
+after_success:
+- if [ $TRAVIS_OS_NAME == linux ]; then ls -al build; fi  
 branches:
   only:
   - master
