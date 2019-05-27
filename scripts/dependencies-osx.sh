@@ -1,7 +1,7 @@
 #!/bin/bash
 
 brew update
-brew install g++
+brew install gcc
 brew install cmake
 brew install python3
 brew install pip3
