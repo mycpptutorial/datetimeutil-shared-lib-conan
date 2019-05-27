@@ -11,8 +11,8 @@ before_install:
 - if [ $TRAVIS_OS_NAME == linux ]; then ./scripts/dependencies-debian.sh; fi
 - if [ $TRAVIS_OS_NAME == osx ]; then ./scripts/dependencies-osx.sh; fi
 script:
-- if [ $TRAVIS_OS_NAME == linux ]; then ./scripts/build.sh . build; fi
-- if [ $TRAVIS_OS_NAME == osx ]; then ./scripts/build.sh . build; fi
+- if [ $TRAVIS_OS_NAME == linux ]; then ./scripts/build.sh .. build; fi
+- if [ $TRAVIS_OS_NAME == osx ]; then ./scripts/build.sh .. build; fi
 branches:
   only:
   - master
