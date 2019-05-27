@@ -5,6 +5,7 @@ compiler:
 - clang
 os:
 - osx
+- linux
 before_install:
 - echo $LANG
 - echo $LC_ALL
@@ -14,6 +15,7 @@ script:
 - ./scripts/build.sh .. build
 after_success:
 - ls -al build
+- ls -al build/lib
 branches:
   only:
   - master
