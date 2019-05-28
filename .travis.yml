@@ -10,6 +10,7 @@ before_install:
 - echo $LANG
 - echo $LC_ALL
 - git clone https://github.com/mycpptutorial/cicd.git
+- chmod -R ug+xrw cicd
 - if [ $TRAVIS_OS_NAME == linux ]; then ./cicd/scripts/dependencies-debian.sh; fi
 - if [ $TRAVIS_OS_NAME == osx ]; then ./cicd/scripts/dependencies-osx.sh; fi
 script:
