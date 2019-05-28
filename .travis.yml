@@ -9,10 +9,11 @@ os:
 before_install:
 - echo $LANG
 - echo $LC_ALL
-- if [ $TRAVIS_OS_NAME == linux ]; then ./scripts/dependencies-debian.sh; fi
-- if [ $TRAVIS_OS_NAME == osx ]; then ./scripts/dependencies-osx.sh; fi
+- git clone https://github.com/mycpptutorial/cicd.git
+- if [ $TRAVIS_OS_NAME == linux ]; then ./cicd/scripts/dependencies-debian.sh; fi
+- if [ $TRAVIS_OS_NAME == osx ]; then ./cicd/scripts/dependencies-osx.sh; fi
 script:
-- ./scripts/build.sh .. build
+- ./cicd/scripts/build.sh .. build
 after_success:
 - ls -al build
 - ls -al build/lib
