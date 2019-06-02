@@ -6,6 +6,7 @@ compiler:
 os:
 - osx
 - linux
+- windows
 before_install:
 - echo $LANG
 - echo $LC_ALL
@@ -13,6 +14,7 @@ before_install:
 - chmod -R ug+xrw cicd
 - if [ $TRAVIS_OS_NAME == linux ]; then ./cicd/scripts/dependencies-debian.sh; fi
 - if [ $TRAVIS_OS_NAME == osx ]; then ./cicd/scripts/dependencies-osx.sh; fi
+- if [ $TRAVIS_OS_NAME == windows ]; then ./cicd/scripts/dependencies-windows.sh; fi
 script:
 - ./cicd/scripts/build.sh .. build
 after_success:
