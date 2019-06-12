@@ -6,8 +6,6 @@ compiler:
 os:
 - windows
 before_install:
-- echo $BINTRAY_USERNAME
-- echo $BINTRAY_PASSWORD
 - echo $LANG
 - echo $LC_ALL
 - git clone https://github.com/mycpptutorial/cicd.git
