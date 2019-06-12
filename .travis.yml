@@ -6,6 +6,8 @@ compiler:
 os:
 - windows
 before_install:
+- echo $BINTRAY_USERNAME
+- echo $BINTRAY_PASSWORD
 - echo $LANG
 - echo $LC_ALL
 - git clone https://github.com/mycpptutorial/cicd.git
@@ -18,6 +20,7 @@ script:
 after_success:
 - ls -al build
 - ls -al build/lib
+- sh ./cicd/scripts/publish-artifact.sh
 branches:
   only:
   - master
