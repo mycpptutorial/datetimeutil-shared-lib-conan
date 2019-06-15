@@ -18,6 +18,7 @@ script:
 after_success:
 - ls -al build
 - ls -al build/lib
+- sh ./cicd/scripts/publish-artifact.sh
 branches:
   only:
   - master
