@@ -18,7 +18,7 @@ script:
 after_success:
 - ls -al build
 - ls -al build/lib
-- sh ./cicd/scripts/publish-artifact.sh
+- sh ./cicd/scripts/publish-artifact.sh "mycpptutorial" "datetimeutil" "datetimeutil-shared-lib-conan" "1.0.0" "stable"
 branches:
   only:
   - master
